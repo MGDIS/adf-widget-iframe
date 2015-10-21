@@ -14,7 +14,8 @@ angular.module('adf.widget.iframe', ['adf.provider'])
           templateUrl: '{widgetsPath}/iframe/src/edit.html'
         },
         config: {
-          height: '420px'
+          height: '420px',
+          icon: 'fa-globe'
         }
       });
   }])
