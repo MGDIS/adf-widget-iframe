@@ -50,7 +50,7 @@
 
     <script type="text/javascript">
       angular
-       .module('adfWidgetSample', ['adf', 'adf.widget.iframe', 'LocalStorageModule'])
+       .module('adfWidgetSample', ['adf', 'adf.widget.iframe', 'LocalStorageModule', 'pascalprecht.translate'])
        .config(function(dashboardProvider, localStorageServiceProvider){
          localStorageServiceProvider.setPrefix('adf.iframe');
          dashboardProvider.structure('4-8', {
@@ -88,6 +88,9 @@
          };
          $scope.$on('adfDashboardChanged', function (event, name, model) {
            localStorageService.set(name, model);
+         });
+         $scope.$on('widgetReady', function(event, config) {
+           config.namespace = 'ns';
          });
        });
     </script>

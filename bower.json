@@ -25,7 +25,8 @@
   ],
   "description": "IFrame widget for the angular-dashboard-framework",
   "dependencies": {
-    "angular-dashboard-framework": "0.8.0"
+    "angular-dashboard-framework": "0.8.0",
+    "angular-translate": "~2.5.0"
   },
   "devDependencies": {
     "angular-local-storage": "0.1.5"

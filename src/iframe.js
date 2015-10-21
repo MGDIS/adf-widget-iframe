@@ -17,7 +17,8 @@ angular.module('adf.widget.iframe', ['adf.provider'])
         }
       });
   })
-  .controller('iframeController', function($sce, config){
+  .controller('iframeController', function($scope, $sce, config){
+    $scope.$emit('widgetReady', $scope.config);
     if (config.url){
       this.url = $sce.trustAsResourceUrl(config.url);
     }
